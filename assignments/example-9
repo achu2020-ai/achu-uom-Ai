@@ -1,0 +1,6 @@
+for i in range(100,500):
+    for j in range(i,500):
+        for k in range(j,500):
+            if i+j+k==1000 and i<j<k and i**2+j**2==k**2:
+                print(i*j*k)
+                break

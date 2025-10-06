@@ -1,0 +1,8 @@
+a=1
+b=2
+total_even=0
+while b<4000000:
+  if b%2==0:
+    total_even+=b
+  a,b=b,a+b
+print(total_even)

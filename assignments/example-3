@@ -1,0 +1,24 @@
+def largest_prime_factor(n):
+    largest = None
+
+    # Remove factor 2 completely
+    while n % 2 == 0:
+        largest = 2
+        n //= 2
+
+    # Now try odd factors from 3 upwards
+    f = 3
+    while f * f <= n:
+        while n % f == 0:
+            largest = f
+            n //= f
+        f += 2
+
+    # If remaining n > 1, it is prime and is the largest factor
+    if n > 1:
+        largest = n
+
+    return largest
+
+
+print(largest_prime_factor(600851475143))   # prints 6857

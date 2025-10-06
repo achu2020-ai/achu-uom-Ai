@@ -1,0 +1,14 @@
+def check_is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True 
+def sum_of_primes_below_n(n):
+    total = 0
+    for i in range(2, n):
+        if check_is_prime(i):
+            total += i
+    return total
+print(sum_of_primes_below_n(2000000))

@@ -1,0 +1,8 @@
+digit_palindrome=[]
+for i in range(99,1000):
+    for j in range(i,1000):
+        num=i*j
+        if str(num)==str(num)[::-1]:
+            digit_palindrome.append(num)
+
+print(max(digit_palindrome))
